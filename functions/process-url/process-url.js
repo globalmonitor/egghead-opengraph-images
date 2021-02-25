@@ -1,16 +1,8 @@
-const cloudinary = require("cloudinary").v2;
-const qs = require("querystring");
-cloudinary.config({
-  cloud_name: "dhx5xpndw",
-  api_key: process.env.CLOUDINARY_KEY,
-  api_secret: process.env.CLOUDINARY_SECRET
-});
+const qs = require('querystring')
 
-exports.handler = async function(event, ctx) {
-  const { queryStringParameters } = event;
-  console.log(queryStringParameters);
+exports.handler = async function (event, ctx) {
+  const {queryStringParameters} = event
   try {
-
     const imageUrl = `https://res.cloudinary.com/${
       process.env.CLOUD_NAME
     }/image/fetch/${encodeURIComponent(
@@ -26,6 +18,6 @@ exports.handler = async function(event, ctx) {
       body: '',
     }
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
-};
+}
