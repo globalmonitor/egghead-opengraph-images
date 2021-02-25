@@ -12,20 +12,20 @@ exports.handler = async function(event, ctx) {
   try {
     // https://res.cloudinary.com/sector/image/upload/v1583637123/og-images/img-1.png
     const imageUrl = cloudinary.url(
-      `${process.env.CHRIS_IMAGE_VERSION}/og-images/img-2.png`,
+      `${process.env.REPORT_IMAGE_VERSION}/og-images/FF4D00-0.8_d2ut0o.png`,
       {
         // resouce_type: "raw"
         sign_url: true,
         // secure: true,
         custom_pre_function: {
           function_type: "remote",
-          source: `https://relaxed-payne-d1bfbe.netlify.app/.netlify/functions/gen-opengraph-image?${qs.stringify(
+          source: `https://peaceful-shannon-670b41.netlify.app/.netlify/functions/gen-opengraph-image?${qs.stringify(
             queryStringParameters
           )}`
         }
       }
     );
-    console.log(`https://relaxed-payne-d1bfbe.netlify.app/.netlify/functions/gen-opengraph-image?${qs.stringify(
+    console.log(`https://peaceful-shannon-670b41.netlify.app/.netlify/functions/gen-opengraph-image?${qs.stringify(
             queryStringParameters
           )}`)
     return {
