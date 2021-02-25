@@ -1,7 +1,7 @@
 const cloudinary = require("cloudinary").v2;
 const qs = require("querystring");
 cloudinary.config({
-  cloud_name: "sector",
+  cloud_name: "dhx5xpndw",
   api_key: process.env.CLOUDINARY_KEY,
   api_secret: process.env.CLOUDINARY_SECRET
 });
